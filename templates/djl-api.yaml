@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: djl-demo-api
+  name: djl-api
   namespace: djl-api
   finalizers:
   - resources-finalizer.argocd.argoproj.io
