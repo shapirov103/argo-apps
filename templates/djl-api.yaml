@@ -1,16 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sync-waves
-  namespace: argocd
+  name: djl-demo-api
+  namespace: djl-api
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sync-waves
+    namespace: djl-api
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: sync-waves
-    repoURL: {{ .Values.spec.source.repoURL }}
+    repoURL: git@github.com:shapirov103/argo-djl-api.git
     targetRevision: {{ .Values.spec.source.targetRevision }}
