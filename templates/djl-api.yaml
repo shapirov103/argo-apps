@@ -12,4 +12,5 @@ spec:
   project: default
   source:
     repoURL: git@github.com:shapirov103/argo-djl-api.git
+    path: .
     targetRevision: {{ .Values.spec.source.targetRevision }}
