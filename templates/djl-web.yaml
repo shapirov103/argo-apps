@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: djl-web
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: djl-web
+    server: {{ .Values.spec.destination.server }}
+  project: webteam
+  source:
+    repoURL: git@github.com:shapirov103/argo-djl-web.git
+    path: .
+    targetRevision: {{ .Values.spec.source.targetRevision }}
