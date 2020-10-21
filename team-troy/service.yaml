@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: djl-app
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: djl-app
   ports:
