@@ -22,7 +22,7 @@ spec:
       labels:
         app: djl-app
     spec:
-      serviceAccountName: djl-backend-account
+      serviceAccountName: inf-backend
       containers:
         - name: djl-app
           image: 929819487611.dkr.ecr.us-east-1.amazonaws.com/djl-spring-boot-app:0.0.1-SNAPSHOT-linux-x86_64-4a50518
