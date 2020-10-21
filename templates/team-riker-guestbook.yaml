@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: djl-api
+  name: team-riker-guestbook
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: djl-api
+    namespace: team-riker
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    repoURL: git@github.com:shapirov103/argo-djl-api.git
-    path: .
+    repoURL: git@github.com:shapirov103/argo-apps.git
+    path: team-riker
     targetRevision: {{ .Values.spec.source.targetRevision }}

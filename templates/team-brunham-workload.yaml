@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: djl-web
+  name: team-burnham-workload
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: djl-web
+    namespace: team-burnham
     server: {{ .Values.spec.destination.server }}
-  project: webteam
+  project: default
   source:
-    repoURL: git@github.com:shapirov103/argo-djl-web.git
-    path: .
+    repoURL: git@github.com:shapirov103/argo-apps.git
+    path: team-burnham
     targetRevision: {{ .Values.spec.source.targetRevision }}
