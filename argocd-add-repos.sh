@@ -7,4 +7,4 @@ argocd repo add git@github.com:shapirov103/argo-djl-web.git --ssh-private-key-pa
 # app of apps
 argocd repo add git@github.com:shapirov103/argo-apps.git --ssh-private-key-path ~/.ssh/github_rsa --insecure-ignore-host-key
 
-
+argocd repo add git@github.com:CarmenAPuccio/GeoLocationAPI.git --ssh-private-key-path ~/.ssh/github_rsa --insecure-ignore-host-key

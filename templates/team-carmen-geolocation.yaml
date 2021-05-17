@@ -12,5 +12,5 @@ spec:
   project: default
   source:
     repoURL: git@github.com:CarmenAPuccio/GeoLocationAPI.git
-    path: team-carmen-geolocation
+    path: templates
     targetRevision: {{ .Values.spec.source.targetRevision }}
