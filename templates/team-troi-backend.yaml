@@ -7,10 +7,10 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: team-troy
+    namespace: team-troi
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
     repoURL: https://github.com/kcoleman731/argo-apps
-    path: team-troy
+    path: team-troi
     targetRevision: {{ .Values.spec.source.targetRevision }}
