@@ -14,3 +14,4 @@ spec:
     repoURL: git@github.com:shapirov103/argo-apps.git
     path: team-burnham
     targetRevision: {{ .Values.spec.source.targetRevision }}
+  syncPolicy: {}
