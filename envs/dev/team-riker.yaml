@@ -11,6 +11,6 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    repoURL: git@github.com:shapirov103/argo-apps.git
-    path: team-riker
+    repoURL: https://github.com/kcoleman731/argo-apps
+    path: teams/team-riker/dev
     targetRevision: {{ .Values.spec.source.targetRevision }}
