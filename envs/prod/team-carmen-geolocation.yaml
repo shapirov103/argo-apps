@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: team-burnham-workload
-  namespace: argocd
+  name: geolocation-api
+  namespace: argo-cd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: team-burnham
+    namespace: geolocationapi
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    repoURL: https://github.com/kcoleman731/argo-apps
-    path: team-burnham
+    repoURL: git@github.com:CarmenAPuccio/GeoLocationAPI.git
+    path: templates
     targetRevision: {{ .Values.spec.source.targetRevision }}

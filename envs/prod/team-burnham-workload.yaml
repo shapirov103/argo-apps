@@ -12,5 +12,5 @@ spec:
   project: default
   source:
     repoURL: https://github.com/kcoleman731/argo-apps
-    path: team-burnham
+    path: teams/team-burnham/prod
     targetRevision: {{ .Values.spec.source.targetRevision }}

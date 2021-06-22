@@ -12,5 +12,5 @@ spec:
   project: default
   source:
     repoURL: https://github.com/kcoleman731/argo-apps
-    path: team-troi/test
+    path: teams/team-troi/test
     targetRevision: {{ .Values.spec.source.targetRevision }}
