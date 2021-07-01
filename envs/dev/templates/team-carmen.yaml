@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: team-riker-guestbook
+  name: team-carmen
   namespace: argo-cd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: team-riker
+    namespace: team-carmen
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    repoURL: https://github.com/kcoleman731/argo-apps
-    path: teams/team-riker/prod
+    repoURL: git@github.com:CarmenAPuccio/GeoLocationAPI.git
+    path: templates
     targetRevision: {{ .Values.spec.source.targetRevision }}

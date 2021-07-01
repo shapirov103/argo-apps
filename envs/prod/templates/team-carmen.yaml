@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: geolocation-api
+  name: team-carmen
   namespace: argo-cd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: geolocationapi
+    namespace: team-carmen
     server: {{ .Values.spec.destination.server }}
   project: default
   source:

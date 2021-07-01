@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: team-burnham-workload
+  name: team-burnham
   namespace: argo-cd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -11,6 +11,6 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    repoURL: https://github.com/kcoleman731/argo-apps
+    repoURL: https://github.com/shapirov103/argo-apps
     path: teams/team-burnham/prod
     targetRevision: {{ .Values.spec.source.targetRevision }}
