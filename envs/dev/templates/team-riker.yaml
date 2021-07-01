@@ -1,8 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: team-riker-guestbook
-  namespace: argo-cd
+  name: team-riker
+  namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -14,3 +14,8 @@ spec:
     repoURL: https://github.com/shapirov103/argo-apps
     path: teams/team-riker/dev
     targetRevision: {{ .Values.spec.source.targetRevision }}
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+    - CreateNamespace=true

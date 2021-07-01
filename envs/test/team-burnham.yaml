@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: team-burnham-workload
+  name: team-burnham
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -14,6 +14,3 @@ spec:
     repoURL: https://github.com/shapirov103/argo-apps
     path: teams/team-burnham/test
     targetRevision: {{ .Values.spec.source.targetRevision }}
-  syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
