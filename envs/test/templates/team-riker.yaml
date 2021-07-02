@@ -1,16 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: inf-backend
-  namespace: argo-cd
+  name: team-riker
+  namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: team-troi
+    namespace: team-riker
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    repoURL: https://github.com/kcoleman731/argo-apps
-    path: teams/team-troi/dev
+    repoURL: https://github.com/shapirov103/argo-apps
+    path: teams/team-riker/test
     targetRevision: {{ .Values.spec.source.targetRevision }}
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true

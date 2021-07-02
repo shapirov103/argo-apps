@@ -1,16 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: team-riker-guestbook
-  namespace: argo-cd
+  name: team-troi
+  namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: team-riker
+    namespace: team-troi
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    repoURL: https://github.com/kcoleman731/argo-apps
-    path: teams/team-riker/prod
+    repoURL: https://github.com/shapirov103/argo-apps
+    path: teams/team-troi/test
     targetRevision: {{ .Values.spec.source.targetRevision }}
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
